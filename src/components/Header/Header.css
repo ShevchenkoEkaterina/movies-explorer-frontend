@@ -1,0 +1,118 @@
+.header {
+    height: 74px;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto 0 auto;
+}
+
+.header__logo {
+    height: 38px;
+    width: 38px;
+    margin: 18px 0 0 70px;
+    cursor: pointer;
+}
+
+.header__button_movies {
+    margin: 28px 0 0 44px;
+    font-weight: 500;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.header__button_savedmovies {
+    margin: 28px 0 0 16px;
+    font-weight: 400;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+.header__account {
+    margin: 21px 0 0 736px;
+    width: 100px;
+    height: 32px;
+    border-radius: 30px;
+    box-shadow: 0.4em 0.4em 5px #F9F9F9;
+    cursor: pointer;
+}
+
+.header__account_word {
+    margin: 9.5px 0 0 11px;
+    font-weight: 500;
+    font-size: 13px;
+    text-decoration: none;
+    color: #000000;
+}
+
+.header__account_icon {
+    margin: 10.75px 0 0 14.81px;
+    width: 10.38px;
+    height: 10.67px;
+}
+
+.header__menu {
+    background-color: #FFFFFF;
+    visibility: hidden;
+    border: none;
+}
+
+@media (max-width: 1279px) {
+    .header {
+      justify-content: space-between;
+    }
+
+    .header__logo {
+      margin: 18px 0 0 30px;
+    }
+
+    .header__menu {
+      margin: 18px 46px 0 0;
+      visibility: visible;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      list-style-type: none;
+    }
+
+    .header__menu_line {
+      border-bottom: solid #000000 3px;
+      margin: 7px 0 0 0;
+      height: 3px;
+      width: 28px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+    }
+
+    .header__button_movies {
+      display: none;
+    }
+    
+    .header__button_savedmovies {
+      display: none;
+    }
+    
+    .header__account {
+      display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__logo {
+      margin: 18px 0 0 14px;
+    }
+
+    .header__menu {
+      margin: 21px 14px 0 0;
+    }
+
+    .header__menu_line {
+      border-bottom: solid #000000 2.5px;
+      margin: 6.5px 0 0 0;
+      height: 2.5px;
+      width: 22px;
+    }
+}
