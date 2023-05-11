@@ -1,0 +1,90 @@
+.portfolio {
+    height: 425px;
+    margin: 0 0 0 70px;
+}
+
+.portfolio__link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portfolio__header {
+    margin: 0 0 50px 0;
+    color: #A0A0A0;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.portfolio__link_github {
+    font-weight: 400;
+    font-size: 30px;
+    text-decoration: none;
+    color: #000000;
+    width: 880px;
+}
+
+.portfolio__link_github:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.portfolio__link_arrow {
+    margin: 0 74px 0 0;
+    height: 25px;
+    width: 25px;
+}
+
+.portfolio__link_arrow:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.portfolio__line {
+    margin: 19px 0 20px 0;
+    border-top: 1px solid #E8E8E8;
+    height: 1px;
+    width: 1140px;
+}
+
+@media (max-width: 1279px) {
+    .portfolio {
+      height: 390px;
+      margin: 0 0 0 50px;
+    }
+
+    .portfolio__link_github {
+      font-size: 28px;
+      width: 760px;
+    }
+
+    .portfolio__line {
+      width: 668px;
+    }
+}
+
+@media (max-width: 767px) {
+    .portfolio {
+      height: 294px;
+      margin: 0 0 0 14px;
+    }
+
+    .portfolio__header {
+      margin: 0 0 40px 0;
+      font-size: 14px;
+    }
+
+    .portfolio__link_github {
+      font-size: 18px;
+      width: 250px;
+    }
+    
+    .portfolio__link_arrow {
+      margin: 0 24px 0 0;
+      height: 18px;
+      width: 18px;
+    }
+
+    .portfolio__line {
+      width: 292px;
+    }
+}

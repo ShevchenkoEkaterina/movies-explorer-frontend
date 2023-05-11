@@ -1,0 +1,48 @@
+.mistake__code {
+    font-weight: 400;
+    font-size: 140px;
+    margin: 246px 0 0 0;
+    text-align: center;
+}
+
+.mistake__message {
+    font-weight: 400;
+    font-size: 16px;
+    margin: 5px 0 0 0;
+    text-align: center;
+}
+
+.mistake__link {
+    font-weight: 400;
+    font-size: 14px;
+    color: #3456F3;
+    margin: 184px 0 60px 0;
+    text-align: center;
+}
+
+@media (max-width: 1279px) {
+    .mistake__code {
+      margin: 408px 0 0 0;
+    }
+
+    .mistake__link {
+      margin: 184px 0 222px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .mistake__code {
+      font-size: 80px;
+      margin: 329px 0 0 0;
+    }
+
+    .mistake__message {
+      font-size: 12px;
+    }
+
+    .mistake__link {
+      font-size: 12px;
+      margin: 284px 0 30px 0;
+    }
+
+}
