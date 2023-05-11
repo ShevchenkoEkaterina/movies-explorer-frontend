@@ -10,8 +10,11 @@
 @import url(Header/HeaderPopup/HeaderPopup.css);
 @import url(Movies/Preloader/Preloader.css);
 @import url(Movies/SearchForm/SearchForm.css);
+@import url(Movies/SearchForm/FilterCheckbox/FilterCheckbox.css);
 @import url(MoviesCardForm/MoviesCardForm.css);
+@import url(Movies/MoviesCard/MoviesCard.css);
 @import url(Movies/MoviesCardList/MoviesCardList.css);
+@import url(SavedMovies/MoviesCard/MoviesCard.css);
 @import url(SavedMovies/MoviesCardList/MoviesCardList.css);
 @import url(Login/Login.css);
 @import url(Register/Register.css);

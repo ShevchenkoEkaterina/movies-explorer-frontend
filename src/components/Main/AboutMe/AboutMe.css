@@ -54,6 +54,11 @@
     color: #000000;
 }
 
+.aboutMe__information_github:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
 .aboutMe__photo {
     width: 270px;
     height: 327px;

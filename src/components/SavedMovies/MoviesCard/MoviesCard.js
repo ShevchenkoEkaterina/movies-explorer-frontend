@@ -5,9 +5,7 @@ import MoviesCardForm from '../../MoviesCardForm/MoviesCardForm';
 function MoviesCard() {
 
   return(
-    <div>
-      <MoviesCardForm action={Delete} actionName="Удалить"/>
-    </div>
+      <MoviesCardForm children={<img className="removal" src={Delete} alt="Удалить"/>}/>
     )
   }
 

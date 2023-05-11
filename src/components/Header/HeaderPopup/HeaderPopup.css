@@ -8,6 +8,7 @@
     opacity: 0;
     visibility: hidden;
     transition: 0.5s opacity, 0.4s visibility;
+    z-index: 1;
 }
 
 .HeaderPopup_opened {
@@ -32,6 +33,14 @@
     margin: 28px auto 0 auto;
     font-weight: 500;
     font-size: 18px;
+}
+
+.headerPopup__link:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.headerPopup__link-name {
     text-decoration: none;
     color: #000000;
 }
@@ -44,7 +53,12 @@
     box-shadow: 0.4em 0.4em 5px #F9F9F9;
 }
 
-.HeaderPopup__account_word {
+.headerPopup__account:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.headerPopup__account_word {
     margin: 9.5px 0 0 11px;
     font-weight: 500;
     font-size: 13px;

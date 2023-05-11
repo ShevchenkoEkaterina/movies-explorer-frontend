@@ -10,7 +10,7 @@ function MoviesCardForm(props) {
         <p className="card__description_duration">27 секунд</p>
       </div>
       <img className="card__image" src={film} alt="Заставка фильма"/>
-      <img className="card__button" src={props.action} alt={props.actionName}/>
+      {props.children}
     </div>
     )
   }

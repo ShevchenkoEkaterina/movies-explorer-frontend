@@ -23,15 +23,15 @@ function Header() {
   return (
     <header className="header">
       <Link to="/" component={<Main/>}><img className="header__logo" src={logo} alt="Логотип"/></Link>
-      <p className="header__button_movies">
-        <Link to="/movies" component={<Movies/>}>Фильмы</Link>
+      <p className="header__movies">
+        <Link to="/movies" className="header__movies_name" component={<Movies/>}>Фильмы</Link>
       </p>
-      <p className="header__button_savedmovies">
-        <Link to="/saved-movies" component={<SavedMovies/>}>Сохраненные фильмы</Link>
+      <p className="header__savedmovies">
+        <Link to="/saved-movies" className="header__savedmovies_name" component={<SavedMovies/>}>Сохраненные фильмы</Link>
       </p>
       <div className="header__account">
       <p className="header__account_word">
-        <Link to="/profile" component={<Profile/>}>Аккаунт </Link>
+        <Link to="/profile" className="header__account_word-name" component={<Profile/>}>Аккаунт </Link>
         </p>
         <img className="header__account_icon" src={accountIcon} alt="Аккаунт"/>
       </div>

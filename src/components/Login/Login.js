@@ -12,7 +12,8 @@ function Login() {
       <form className="login__form">
         <label htmlFor="email" className="login__input">E-mail
           <input 
-            required id="email" 
+            required 
+            id="email" 
             name="email" 
             className="login__input-text" 
             type="email"/>

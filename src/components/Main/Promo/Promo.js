@@ -13,7 +13,7 @@ return (
         <div className="promo__sign">
           <Link to="/signup" className="promo__sign_signup" component={<Register/>}>Регистрация</Link>
           <button className="promo__sign_signin">
-          <Link to="/signin" component={<Login/>}>Войти</Link>
+            <Link className="promo__sign_signin-button" to="/signin" component={<Login/>}>Войти</Link>
           </button>
         </div>
       </div>

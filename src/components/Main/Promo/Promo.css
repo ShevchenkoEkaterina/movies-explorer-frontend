@@ -27,9 +27,13 @@
     cursor: pointer;
 }
 
+.promo__sign_signup:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
 .promo__sign_signin {
     border: none;
-    color: #000000;
     font-weight: 500;
     font-size: 12px;
     background: #2BE080;
@@ -37,8 +41,16 @@
     height: 32px;
     border-radius: 3px;
     margin: 21px 70px 0 30px;
-    text-decoration: none;
+}
+
+.promo__sign_signin:hover {
     cursor: pointer;
+    opacity: 0.6;
+}
+
+.promo__sign_signin-button {
+    color: #000000;
+    text-decoration: none;
 }
 
 .promo__down {
@@ -84,6 +96,11 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+.promo__button_more:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 @media (max-width: 1279px) {
