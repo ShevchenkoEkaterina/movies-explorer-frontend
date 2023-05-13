@@ -1,0 +1,22 @@
+.removal {
+  margin: 18px 0 0 130px;
+  width: 100px;
+  height: 29px;
+}
+
+.removal:hover {
+cursor: pointer;
+opacity: 0.6;
+}
+
+@media (max-width: 1279px) {
+  .removal {
+    margin: 18px 0 0 121px;
+  }
+}
+
+@media (max-width: 767px) {
+  .removal {
+    margin: 18px 0 0 100px;
+  }
+}

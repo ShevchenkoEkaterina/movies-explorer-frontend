@@ -6,6 +6,7 @@
 .portfolio__link {
     display: flex;
     justify-content: space-between;
+    text-decoration: none;
 }
 
 .portfolio__header {
@@ -18,7 +19,6 @@
 .portfolio__link_github {
     font-weight: 400;
     font-size: 30px;
-    text-decoration: none;
     color: #000000;
     width: 880px;
 }
@@ -30,6 +30,7 @@
 
 .portfolio__link_arrow {
     margin: 0 74px 0 0;
+    align-self: center;
     height: 25px;
     width: 25px;
 }
@@ -75,7 +76,7 @@
 
     .portfolio__link_github {
       font-size: 18px;
-      width: 250px;
+      width: 260px;
     }
     
     .portfolio__link_arrow {

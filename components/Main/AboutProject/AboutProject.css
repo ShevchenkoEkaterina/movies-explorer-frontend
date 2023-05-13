@@ -1,0 +1,153 @@
+.aboutProject {
+    margin: 0 0 0 70px;
+    height: 608px;
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutProject__header {
+    margin: 110px 0 0 0;
+    width: 1140px;
+    height: 78px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 22px;
+    border-bottom: 1px solid #000000;
+}
+
+.aboutProject__allinformation_about {
+    display: flex;
+}
+
+.aboutProject__allinformation_time {
+    display: flex;
+}
+
+.aboutProject__information {
+    margin: 70px 0 0 0;
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.aboutProject__information_description {
+    margin: 26px 0 0 0;
+    width: 550px;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.aboutProject__duration_1 {
+    margin: 70px 0 0 0;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    width: 228px;
+    height: 27px;
+    background-color:#2BE080;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.aboutProject__duration_2 {
+    margin: 70px 0 0 0;
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    width: 912px;
+    height: 27px;
+    background-color:#F2F2F2;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.aboutProject__duration_description_1 {
+    margin: 14px 0 0 0;
+    color: #A0A0A0;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
+
+.aboutProject__duration_description_2 {
+    margin: 14px 0 0 0;
+    color: #A0A0A0;
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 1279px) {
+    .aboutProject {
+      height: 585px;
+      margin: 0 0 0 50px;
+    }
+
+    .aboutProject__header {
+      margin: 90px 0 0 0;
+      height: 50px;
+      width: 668px;
+  }
+
+  .aboutProject__information_description {
+      margin: 22px 0 0 0;
+      width: 319px;
+      font-size: 12px;
+}
+
+.aboutProject__duration_1 {
+      margin: 93px 0 0 0;
+      width: 140px;
+      height: 36px;
+}
+
+.aboutProject__duration_2 {
+      margin: 93px 0 0 0;
+      width: 528px;
+      height: 36px;
+}
+}
+
+@media (max-width: 767px) {
+    .aboutProject {
+      height: 641px;
+      margin: 0 0 0 18px;
+    }
+
+    .aboutProject__header {
+      margin: 70px 0 0 0;
+      width: 284px;
+  }
+
+  
+.aboutProject__allinformation_about {
+      display: flex;
+      flex-direction: column;
+}
+
+  .aboutProject__information {
+      margin: 70px 0 0 0;
+      font-size: 18px;
+}
+
+  .aboutProject__information_description {
+      margin: 16px 0 0 0;
+      width: 284px;
+      font-size: 11px;
+}
+
+.aboutProject__duration_1 {
+      margin: 60px 0 0 0;
+      width: 100px;
+      height: 35px;
+}
+
+.aboutProject__duration_2 {
+      margin: 60px 0 0 0;
+      width: 184px;
+      height: 35px;
+}
+}
