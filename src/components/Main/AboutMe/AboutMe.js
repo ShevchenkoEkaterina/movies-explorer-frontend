@@ -10,7 +10,7 @@ return (
           <h3 className="aboutMe__information_name">Екатерина</h3> 
           <p className="aboutMe__information_mainDescription">Фронтенд-разработчик, 26 лет</p>
           <p className="aboutMe__information_description">Я родилась в Севастополе, уже 9 лет живу в Москве.</p>
-          <a className="aboutMe__information_github" target="_blank" href='https://github.com/ShevchenkoEkaterina'>Github</a>
+          <a className="aboutMe__information_github" href='https://github.com/ShevchenkoEkaterina'>Github</a>
         </div>
         <img className="aboutMe__photo" src={photo} alt="Me"/>
       </div>

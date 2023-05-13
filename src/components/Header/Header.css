@@ -75,6 +75,7 @@
   color: #000000;
 }
 
+
 .header__account_icon {
     margin: 10.75px 0 0 14.81px;
     width: 10.38px;
@@ -101,6 +102,7 @@
       visibility: visible;
       display: flex;
       flex-direction: column;
+      cursor: pointer;
       list-style-type: none;
     }
 

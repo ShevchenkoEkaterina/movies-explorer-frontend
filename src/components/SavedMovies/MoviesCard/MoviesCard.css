@@ -2,22 +2,11 @@
   margin: 18px 0 0 130px;
   width: 100px;
   height: 29px;
-  display: flex;
-  justify-content: center;
-  background-color: #F9F9F9;
-  border: none;
-  border-radius: 30px;
-  align-items: center;
 }
 
 .removal:hover {
-  cursor: pointer;
-  opacity: 0.6;
-}
-
-.removal_icon {
-  width: 6.84px;
-  height: 6.72px;
+cursor: pointer;
+opacity: 0.6;
 }
 
 @media (max-width: 1279px) {
