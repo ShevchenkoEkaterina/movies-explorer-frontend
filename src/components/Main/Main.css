@@ -1,0 +1,16 @@
+.main {
+    max-width: 1280px;
+    margin: 0 auto 0 auto;
+}
+
+@media (max-width: 1279px) {
+    .main {
+        max-width: 768px;
+    } 
+}
+
+@media (max-width: 767px) {
+    .main {
+        max-width: 320px;
+    } 
+}
