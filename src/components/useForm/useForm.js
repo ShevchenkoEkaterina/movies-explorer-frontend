@@ -1,31 +1,29 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useMemo, useRef } from "react";
 
-export function useForm() {
-  const [values, setValues] = React.useState({});
-
-  const handleChange = (evt) => {
-    const input = evt.target;
-    const value = input.value;
-    const name = input.name;
-    setValues({ ...values, [name]: value });
-  };
-
-  return { values, handleChange, setValues };
-}
-
-export function useFormWithValidation() {
+export default function useFormWithValidation(initialValue = {}) {
   const [values, setValues] = React.useState({});
   const [errors, setErrors] = React.useState({});
   const [isValid, setIsValid] = React.useState(false);
+  const initialState = useRef(initialValue)
+  const isEmailValidator = require('validator').isEmail;
 
-  const handleChange = (evt) => {
+  const handleChange = useCallback((evt) => {
     const input = evt.target;
     const value = input.value;
     const name = input.name;
-    setValues({ ...values, [name]: value });
-    setErrors({ ...errors, [name]: input.validationMessage });
+
+    if (name === 'email') {
+      if (isEmailValidator(value)) {
+        input.setCustomValidity('');
+      } else {
+        input.setCustomValidity('Что-то пошло не так...');
+      }
+    }
+
+    setValues((prev) => ({ ...prev, [name]: value }));
+    setErrors((prev) => ({ ...prev, [name]: input.validationMessage }));
     setIsValid(input.closest("form").checkValidity());
-  };
+  }, []);
 
   const resetFrom = useCallback(
     (newValues = {}, newErrors = {}, newIsValid = false) => {
@@ -36,5 +34,13 @@ export function useFormWithValidation() {
     [setValues, setErrors, setIsValid]
   );
 
-  return { values, handleChange, resetFrom, errors, isValid };
+  const isDirty = useMemo(() => {
+    const initial = initialState.current;
+
+    return Object.keys(values).some((key) => {
+      return !initial[key] || initial[key] !== values[key]
+    })
+  }, [values]);
+
+  return { values, setValues, handleChange, resetFrom, errors, isValid, isDirty };
 }

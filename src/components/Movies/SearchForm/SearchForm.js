@@ -1,9 +1,19 @@
-import React from 'react';
+import { useState } from 'react'
 import find from '../../../images/find.svg';
 import FiterCheckbox from './FilterCheckbox/FilterCheckbox';
 
-function SearchForm() {
+function SearchForm(props) {
+  const [filterString, setFilterString] = useState('')
 
+  function handleChangeFilterString(e) {
+    setFilterString(e.target.value)
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault()
+    props.handleSubmitSearch(filterString)
+  }
+  
   return(
     <div className="searchForm">
       <form className="searchForm__form">
@@ -13,11 +23,12 @@ function SearchForm() {
           className="searchForm__input-text" 
           placeholder="Фильм"
           required
+          onChange={handleChangeFilterString} 
           />
-        <button type="submit" className="searchForm__button">Найти</button>
+        <button onClick={handleSubmit} type="submit" className="searchForm__button">Найти</button>
         <div className="searchForm__line"></div>
         <div className="fiterCheckbox">
-        <FiterCheckbox/>
+        <FiterCheckbox handleToggle={props.handleToggle}/>
       </div>
       </form>
       <div className="searchForm__downLine"></div>

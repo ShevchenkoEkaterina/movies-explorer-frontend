@@ -1,6 +1,10 @@
 import React from 'react';
 
-function FilterCheckbox() {
+function FilterCheckbox(props) {
+
+  function handleToggleThis(e) {
+    props.handleToggle()
+  }
 
   return(
     <div className="searchForm__checkbox">
@@ -8,7 +12,7 @@ function FilterCheckbox() {
         type='checkbox'
         id="checkbox"
         className="searchForm__checkbox-input"/>
-      <label for="checkbox" className="searchForm__checkbox-label">Toggle</label>
+      <label onClick={handleToggleThis} htmlFor="checkbox" className="searchForm__checkbox-label">Toggle</label>
       <p className="searchForm__input-checkbox_description">Короткометражки</p>
     </div>
     )
