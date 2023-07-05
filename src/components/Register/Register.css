@@ -29,10 +29,11 @@
     color: #A0A0A0;
     font-weight: 400;
     font-size: 10px;
+    margin: 0 0 24px 0;
 }
 
 .register__input-text {
-    margin: 0 0 24px 0;
+    margin: 0 0 6px 0;
     padding: 0 0 10px 0;
     font-weight: 400;
     font-size: 14px;
@@ -40,6 +41,12 @@
     width: 396px;
     height: 28px;
     border-bottom: 1px #E8E8E8 solid;
+}
+
+.register__error {
+    color: #FF3055;
+    font-size: 10px;
+    font-weight: 400;
 }
 
 .register__button {
@@ -52,6 +59,16 @@
     border: none;
     background-color: #3456F3;
     color: #FFFFFF;
+}
+
+.register__button:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.register__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .register__login {
@@ -71,6 +88,11 @@
 .register__login_link {
     margin: 0 0 0 6px;
     color: #3456F3;
+}
+
+.register__login_link:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 @media (max-width: 1279px) {

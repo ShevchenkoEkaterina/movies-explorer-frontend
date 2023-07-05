@@ -24,13 +24,20 @@
 }
 
 .profile__input-text {
+    margin: 0 0 6px 0;
     font-weight: 400;
     font-size: 11px;
     border: none;
-    direction: rtl;
     max-height: 14px;
     width: 285px;
     margin-left: 85px;
+    direction: rtl;
+}
+
+.profile__error {
+    color: #FF3055;
+    font-size: 10px;
+    font-weight: 400;
 }
 
 .profile__line {
@@ -49,14 +56,32 @@
     margin: 220px auto 16px auto;
  }
 
- .profile__link {
+.profile__button:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.profile__button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.profile__link {
     height: 16px;
     font-weight: 500;
     font-size: 13px;
     text-align: center;
     color: #FF3055;
     margin: 0 auto 78px auto;
- }
+    border: none;
+    background-color: #FFFFFF;
+    display: flex;
+}
+
+.profile__link:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
 
  @media (max-width: 1279px) {
     .profile__welcome {

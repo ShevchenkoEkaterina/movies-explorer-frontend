@@ -1,30 +1,29 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import Header from '../Header/Header';
+import CurrentUserContext  from '../../contexts/CurrentUserContext';
+import useFormWithValidation from '../useForm/useForm';
 
 function Profile(props) {
-  const [userData, setUserData] = useState({name: '', email: ''});
+  const currentUser = useContext(CurrentUserContext);
+  const { values, handleChange, setValues, errors, isValid} = useFormWithValidation();
 
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setUserData({
-      ...userData,
-      [name]: value,
-    });
-  };
+ useEffect(() => {
+  setValues({
+    name: currentUser.name,
+    email: currentUser.email,
+  });
+}, [currentUser.name, currentUser.email, setValues]);
+  
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (!userData.name || !userData.email) {
-      return;
-    }
-    const { name, email } = userData;
-    props.handleSubmitSignIn(name, email);
-  }
+    props.onUpdateUser({ name: values["name"], email: values["email"] });;
+  } 
 
   return(
     <div className="profile">
       <Header />
-      <p className="profile__welcome">Привет, {userData.name}!</p>
+      <p className="profile__welcome">Привет, {currentUser.name}!</p>
       <form onSubmit={handleSubmit} className="profile__form">
       <label htmlFor="name" className="profile__input">Имя
           <input 
@@ -33,22 +32,28 @@ function Profile(props) {
             name="name" 
             className="profile__input-text" 
             type="text" 
-            value={userData.name} 
+            value={values["name"] || ""}
+            minLength={2}
+            maxLength={30}
+            pattern="^[A-Za-zА-Яа-яЁё -]+$"
             onChange={handleChange} />
+          {errors["name"] && <span className="profile__error">{errors["name"]}</span>}
         </label>
         <div className="profile__line"></div>
         <label htmlFor="email" className="profile__input">E-mail
           <input 
-            required id="email" 
+            required 
+            id="email" 
             name="email" 
             className="profile__input-text" 
             type="email" 
-            value={userData.email} 
+            value={values["email"] || ""}
             onChange={handleChange} />
+          {errors["email"] && <span className="profile__error">{errors["email"]}</span>}
         </label>
-          <button type="submit" onSubmit={handleSubmit} className="profile__button">Редактировать</button>
-          <p className="profile__link">Выйти из аккаунта</p>
+          <button type="submit" disabled={!isValid} className="profile__button">Редактировать</button>
       </form>
+      <button onClick={props.handleSubmitSignOut} className="profile__link">Выйти из аккаунта</button>
     </div>
     )
   }
